@@ -238,9 +238,11 @@
                 Strategic communications executive shaping narratives for high-stakes government, public policy, &amp; non-profit sectors.
             </p>
             <div class="flex flex-wrap justify-center gap-4 fade-up delay-300 visible" style="opacity:1;transform:none;">
-                <span class="text-white px-9 py-3.5 rounded-full font-semibold shadow-lg flex items-center gap-2 text-sm" style="background:var(--blue-accent);">
-                    <i class="fas fa-envelope text-sm"></i> mike@mikefrontiero.com
-                </span>
+                <!-- *** CHANGED: replaced broken Cloudflare-encoded link with working mailto *** -->
+                <a href="mailto:mike@mikefrontiero.com" style="background:var(--blue-accent);"
+                   class="text-white px-9 py-3.5 rounded-full font-semibold transition-all duration-200 shadow-lg flex items-center gap-2 text-sm hover:opacity-90">
+                    <i class="fas fa-envelope text-sm"></i> Contact Mike
+                </a>
                 <!-- IMPROVEMENT: CV link should go to /pub or PDF export, not /edit -->
                 <a href="https://docs.google.com/document/d/1VsAF-1Qria3O6KH05YgOrlzVuRz5WJC2VFgDr7uITtw/export?format=pdf" target="_blank"
                    class="bg-white text-slate-900 hover:bg-slate-100 px-9 py-3.5 rounded-full font-semibold transition-all duration-200 shadow-lg flex items-center gap-2 text-sm uppercase tracking-wider">
@@ -549,7 +551,13 @@
                 Whether you're facing a crisis, building a campaign, or shaping a narrative — let's find time to connect.
             </p>
             <div class="flex flex-col items-center gap-5">
-                <span class="text-xl font-light" style="color:var(--gold);">mike@mikefrontiero.com</span>
+                <!-- *** CHANGED: replaced broken Cloudflare-encoded link with working mailto *** -->
+                <a href="mailto:mike@mikefrontiero.com"
+                   class="text-xl font-light transition-colors duration-200 underline underline-offset-8"
+                   style="color:var(--gold); text-decoration-color: rgba(201,169,110,0.4);"
+                   onmouseover="this.style.color='white';" onmouseout="this.style.color='#c9a96e';">
+                    mike@mikefrontiero.com
+                </a>
                 <a href="https://www.linkedin.com/in/mfrontiero/" target="_blank"
                    class="text-3xl text-slate-500 hover:text-white transition-colors duration-200">
                     <i class="fab fa-linkedin"></i>
@@ -560,7 +568,7 @@
         <p class="text-slate-600 text-xs mt-20">© 2025 Mike Frontiero. All rights reserved.</p>
     </section>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // ── Mobile menu toggle ──
         const toggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -569,11 +577,3 @@
         });
         // Close mobile menu when a link is clicked
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-        });
-
-        // ── Scroll-triggered fade-up for non-hero elements ──
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible
