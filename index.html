@@ -597,6 +597,23 @@
         document.querySelectorAll('.fade-up').forEach(el => {
             observer.observe(el);
         });
+// ── Header Scroll Effect ──
+const nav = document.querySelector('.sticky-nav');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        // Scrolled state: Solid background with shadow
+        nav.style.backgroundColor = "rgba(11, 24, 41, 0.98)";
+        nav.style.boxShadow = "0 10px 30px -10px rgba(0,0,0,0.3)";
+    } else {
+        // Top state: More transparent
+        nav.style.backgroundColor = "rgba(11, 24, 41, 0.85)";
+        nav.style.boxShadow = "none";
+    }
+});
+
+
+        
     </script>
 </body>
 </html>
