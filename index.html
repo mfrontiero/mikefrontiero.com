@@ -639,15 +639,17 @@
                         <input type="text" name="name" id="name" placeholder="Your Name" required class="form-input">
                     </div>
                     <div>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required class="form-input">
+                        <input type="email" name="_replyto" id="email" placeholder="Your Email" required class="form-input">
                     </div>
                 </div>
                 <div>
-                    <input type="text" name="subject" id="subject" placeholder="Subject" required class="form-input">
+                    <input type="text" name="_subject" id="subject" placeholder="Subject" required class="form-input">
                 </div>
                 <div>
                     <textarea name="message" id="message" placeholder="Your Message" required class="form-textarea"></textarea>
                 </div>
+                <!-- Hidden field to stay on same page after submission -->
+                <input type="hidden" name="_next" value="#contact">
                 <div class="text-center">
                     <button type="submit" class="submit-btn">Send Message</button>
                 </div>
@@ -703,50 +705,16 @@
             observer.observe(el);
         });
 
-        // ── Contact Form Handler ──
-        const contactForm = document.getElementById('contactForm');
-        const formSuccess = document.getElementById('formSuccess');
-
-        contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            // Get the submit button and disable it during submission
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
-            try {
-                // Send form data to Formspree
-                const formData = new FormData(contactForm);
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    // Show success message
-                    formSuccess.style.display = 'block';
-                    
-                    // Reset form
-                    contactForm.reset();
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        formSuccess.style.display = 'none';
-                    }, 5000);
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Sorry, there was an error sending your message. Please try again or email me directly at mike@mikefrontiero.com');
-            } finally {
-                // Re-enable submit button
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
+        // ── Check for successful form submission ──
+        // Formspree will redirect back with a query parameter
+        if (window.location.hash === '#contact' && window.location.search.includes('submit=success')) {
+            const formSuccess = document.getElementById('formSuccess');
+            if (formSuccess) {
+                formSuccess.style.display = 'block';
+                setTimeout(() => {
+                    formSuccess.style.display = 'none';
+                    // Clean up URL
+                    window.history.replaceState({}, document.title, window.location.pathname + '#contact');
+                }, 5000);
             }
-        });
+        }
