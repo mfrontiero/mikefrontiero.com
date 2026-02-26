@@ -633,7 +633,7 @@
             </p>
 
             <!-- Contact Form -->
-            <form id="contactForm" class="space-y-5 mb-10">
+            <form id="contactForm" action="https://formspree.io/f/xkovyloo" method="POST" class="space-y-5 mb-10">
                 <div class="grid md:grid-cols-2 gap-5">
                     <div>
                         <input type="text" name="name" id="name" placeholder="Your Name" required class="form-input">
@@ -707,52 +707,46 @@
         const contactForm = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
 
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
+            // Get the submit button and disable it during submission
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
 
-            // Here you would typically send the data to your backend
-            // For now, we'll simulate a successful submission
-            console.log('Form submitted:', formData);
-            
-            // Show success message
-            formSuccess.style.display = 'block';
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                formSuccess.style.display = 'none';
-            }, 5000);
+            try {
+                // Send form data to Formspree
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
 
-            // In production, you'd use something like:
-            /*
-            fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                formSuccess.style.display = 'block';
-                contactForm.reset();
-                setTimeout(() => {
-                    formSuccess.style.display = 'none';
-                }, 5000);
-            })
-            .catch(error => {
+                if (response.ok) {
+                    // Show success message
+                    formSuccess.style.display = 'block';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        formSuccess.style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
                 console.error('Error:', error);
-                alert('Sorry, there was an error sending your message. Please try again.');
-            });
-            */
+                alert('Sorry, there was an error sending your message. Please try again or email me directly at mike@mikefrontiero.com');
+            } finally {
+                // Re-enable submit button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
         });
