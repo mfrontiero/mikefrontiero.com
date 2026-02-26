@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navy blue background -->
+  <rect width="64" height="64" fill="#0b1829" rx="12"/>
+  
+  <!-- Gold "MF" monogram -->
+  <text x="32" y="44" 
+        font-family="Georgia, serif" 
+        font-size="32" 
+        font-weight="600" 
+        fill="#c9a96e" 
+        text-anchor="middle">MF</text>
+</svg>
