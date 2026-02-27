@@ -648,14 +648,10 @@
                 <div>
                     <textarea name="message" id="message" placeholder="Your Message" required class="form-textarea"></textarea>
                 </div>
-                <!-- Hidden field to stay on same page after submission -->
-                <input type="hidden" name="_next" value="#contact">
+                <!-- Redirect to custom success page -->
+                <input type="hidden" name="_next" value="success.html">
                 <div class="text-center">
                     <button type="submit" class="submit-btn">Send Message</button>
-                </div>
-                <div id="formSuccess" class="form-success text-center">
-                    <i class="fas fa-check-circle mr-2"></i>
-                    Thank you! Your message has been sent successfully.
                 </div>
             </form>
 
@@ -704,17 +700,3 @@
         document.querySelectorAll('.fade-up').forEach(el => {
             observer.observe(el);
         });
-
-        // ── Check for successful form submission ──
-        // Formspree will redirect back with a query parameter
-        if (window.location.hash === '#contact' && window.location.search.includes('submit=success')) {
-            const formSuccess = document.getElementById('formSuccess');
-            if (formSuccess) {
-                formSuccess.style.display = 'block';
-                setTimeout(() => {
-                    formSuccess.style.display = 'none';
-                    // Clean up URL
-                    window.history.replaceState({}, document.title, window.location.pathname + '#contact');
-                }, 5000);
-            }
-        }
