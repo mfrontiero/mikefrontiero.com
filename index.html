@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -10,12 +9,13 @@
     <meta property="og:description" content="Strategic advisor to governors and C-suite leaders. Specialized in crisis management, reputation defense, and mission-driven storytelling.">
     <meta property="og:type" content="website">
     
-    <meta property="og:image" content="https://your-domain.com/og-preview.jpg">
+    <meta property="og:image" content="https://mikefrontiero.com/og-preview.jpg">
+    <meta name="description" content="Strategic communications executive with 20+ years advising governors, C-suite leaders, and non-profits. Expert in crisis management, reputation defense, and mission-driven storytelling.">
+    <link rel="canonical" href="https://mikefrontiero.com/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <style>
         :root {
@@ -33,6 +33,28 @@
 
         .font-display { 
             font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        /* ─── NAV ACTIVE STATE ─── */
+        .nav-link {
+            position: relative;
+            transition: color 0.2s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--gold);
+            border-radius: 2px;
+            transition: width 0.25s ease;
+        }
+        .nav-link.active,
+        .nav-link:hover {
+            color: white !important;
+        }
+        .nav-link.active::after {
+            width: 100%;
         }
 
         /* ─── NAV ─── */
@@ -189,22 +211,22 @@
 
             <!-- Desktop links -->
             <div class="hidden md:flex gap-8 text-xs uppercase tracking-widest text-slate-400 font-semibold">
-                <a href="#profile"    class="hover:text-white transition-colors duration-200">Profile</a>
-                <a href="#impact"     class="hover:text-white transition-colors duration-200">Impact</a>
-                <a href="#experience" class="hover:text-white transition-colors duration-200">Experience</a>
-                <a href="#expertise"  class="hover:text-white transition-colors duration-200">Expertise</a>
-                <a href="#media"      class="hover:text-white transition-colors duration-200">Media</a>
-                <a href="#contact"    class="hover:text-white transition-colors duration-200">Contact</a>
+                <a href="#profile"    class="nav-link hover:text-white transition-colors duration-200">Profile</a>
+                <a href="#impact"     class="nav-link hover:text-white transition-colors duration-200">Impact</a>
+                <a href="#experience" class="nav-link hover:text-white transition-colors duration-200">Experience</a>
+                <a href="#expertise"  class="nav-link hover:text-white transition-colors duration-200">Expertise</a>
+                <a href="#media"      class="nav-link hover:text-white transition-colors duration-200">Media</a>
+                <a href="#contact"    class="nav-link hover:text-white transition-colors duration-200">Contact</a>
             </div>
 
             <div class="flex items-center gap-4">
                 <a href="https://www.linkedin.com/in/mfrontiero/" target="_blank"
                    class="hidden md:flex bg-[#0077b5] text-white px-5 py-2 rounded-full text-xs font-bold tracking-wide hover:bg-[#005582] transition-colors duration-200 shadow-md items-center gap-2">
-                    <i class="fab fa-linkedin"></i>LinkedIn
+                    <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn
                 </a>
               
                 <button id="menu-toggle" class="md:hidden text-white text-xl focus:outline-none" aria-label="Open menu">
-                    <i class="fas fa-bars"></i>
+                    <svg style="display:inline-block;vertical-align:middle;" width="1.25em" height="1.25em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
                 </button>
             </div>
         </div>
@@ -219,7 +241,7 @@
             <a href="#contact"    class="hover:text-white transition block py-1">Contact</a>
             <a href="https://www.linkedin.com/in/mfrontiero/" target="_blank"
                class="flex items-center gap-2 text-[#4da6d9] hover:text-white transition py-1">
-                <i class="fab fa-linkedin"></i> LinkedIn
+                <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn
             </a>
         </div>
     </nav>
@@ -243,12 +265,12 @@
             <div class="flex flex-wrap justify-center gap-4 fade-up delay-300 visible" style="opacity:1;transform:none;">
               
                 <a href="#contact" style="background:var(--blue-accent);" class="text-white px-9 py-3.5 rounded-full font-semibold transition-all duration-200 shadow-lg flex items-center gap-2 text-sm hover:opacity-90">
-                    <i class="fas fa-envelope text-sm"></i> Contact Mike
+                    <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Contact Mike
                 </a>
               
                 <a href="https://docs.google.com/document/d/1VsAF-1Qria3O6KH05YgOrlzVuRz5WJC2VFgDr7uITtw/export?format=pdf" target="_blank"
                    class="bg-white text-slate-900 hover:bg-slate-100 px-9 py-3.5 rounded-full font-semibold transition-all duration-200 shadow-lg flex items-center gap-2 text-sm uppercase tracking-wider">
-                    <i class="fas fa-file-pdf"></i> Download CV
+                    <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Download CV
                 </a>
             </div>
         </div>
@@ -278,31 +300,31 @@
                 <ul class="space-y-4 text-sm text-slate-700">
                     <li class="flex items-center gap-3 font-medium">
                         <span class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0" style="background:#eff6ff;">
-                            <i class="fas fa-shield-alt text-xs" style="color:var(--blue-accent);"></i>
+                            <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                         </span>
                         Reputation Management
                     </li>
                     <li class="flex items-center gap-3 font-medium">
                         <span class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0" style="background:#eff6ff;">
-                            <i class="fas fa-exclamation-triangle text-xs" style="color:var(--blue-accent);"></i>
+                            <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                         </span>
                         Crisis Communications
                     </li>
                     <li class="flex items-center gap-3 font-medium">
                         <span class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0" style="background:#eff6ff;">
-                            <i class="fas fa-broadcast-tower text-xs" style="color:var(--blue-accent);"></i>
+                            <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.89 15.536A9 9 0 0 1 3 12m0 0a9 9 0 0 1 18 0m0 0a9 9 0 0 1-1.89 3.536M12 12v9m0-9a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
                         </span>
                         Tier-1 Media Placement
                     </li>
                     <li class="flex items-center gap-3 font-medium">
                         <span class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0" style="background:#eff6ff;">
-                            <i class="fas fa-microphone text-xs" style="color:var(--blue-accent);"></i>
+                            <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
                         </span>
                         On-the-Record Spokesperson
                     </li>
                     <li class="flex items-center gap-3 font-medium">
                         <span class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0" style="background:#eff6ff;">
-                            <i class="fas fa-pen-fancy text-xs" style="color:var(--blue-accent);"></i>
+                            <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
                         </span>
                         Executive Speechwriting
                     </li>
@@ -512,7 +534,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
                 <div class="p-7 rounded-2xl border border-slate-100 card-hover shadow-sm" style="background:#f8f9ff;">
-                    <div class="mb-4 text-2xl" style="color:var(--blue-accent);"><i class="fas fa-chart-bar"></i></div>
+                    <div class="mb-4 text-2xl" style="color:var(--blue-accent);"><svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
                     <h4 class="font-bold text-slate-800 mb-3 text-sm uppercase tracking-wide">PR &amp; Analytics</h4>
                     <div>
                         <span class="tool-chip">Meltwater</span>
@@ -523,7 +545,7 @@
                 </div>
 
                 <div class="p-7 rounded-2xl border border-slate-100 card-hover shadow-sm" style="background:#f8f9ff;">
-                    <div class="mb-4 text-2xl" style="color:var(--blue-accent);"><i class="fas fa-palette"></i></div>
+                    <div class="mb-4 text-2xl" style="color:var(--blue-accent);"><svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.477-1.129-.29-.294-.464-.692-.464-1.128 0-.942.754-1.706 1.685-1.706H16c2.761 0 5-2.239 5-5 0-4.42-4.03-8-9-8z"/></svg></div>
                     <h4 class="font-bold text-slate-800 mb-3 text-sm uppercase tracking-wide">Content &amp; Design</h4>
                     <div>
                         <span class="tool-chip">Adobe CC</span>
@@ -534,7 +556,7 @@
                 </div>
 
                 <div class="p-7 rounded-2xl border border-slate-100 card-hover shadow-sm" style="background:#f8f9ff;">
-                    <div class="mb-4 text-2xl" style="color:var(--blue-accent);"><i class="fas fa-robot"></i></div>
+                    <div class="mb-4 text-2xl" style="color:var(--blue-accent);"><svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg></div>
                     <h4 class="font-bold text-slate-800 mb-3 text-sm uppercase tracking-wide">AI &amp; Strategy</h4>
                     <div>
                         <span class="tool-chip">Gemini</span>
@@ -545,7 +567,7 @@
                 </div>
 
                 <div class="p-7 rounded-2xl border border-slate-100 card-hover shadow-sm" style="background:#f8f9ff;">
-                    <div class="mb-4 text-2xl" style="color:var(--blue-accent);"><i class="fas fa-tasks"></i></div>
+                    <div class="mb-4 text-2xl" style="color:var(--blue-accent);"><svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
                     <h4 class="font-bold text-slate-800 mb-3 text-sm uppercase tracking-wide">Management</h4>
                     <div>
                         <span class="tool-chip">SharePoint</span>
@@ -573,7 +595,7 @@
                     </div>
                     <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">"Give Me Liberty or Give Me Death" — 250th Anniversary of Patrick Henry's Speech</p>
                     <p class="text-sm text-slate-500 leading-relaxed flex-1">AP coverage of the 250th anniversary commemoration at St. John's Church, where Mike served as communications lead for the historic event.</p>
-                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <i class="fas fa-arrow-right text-xs"></i></span>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <svg style="display:inline-block;vertical-align:middle;" width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>
 
                 <!-- Press Item 2 -->
@@ -583,7 +605,7 @@
                     </div>
                     <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">Youngkin Recalls Henry's Spark of Revolutionary History — and Recent History</p>
                     <p class="text-sm text-slate-500 leading-relaxed flex-1">RTD coverage of the Patrick Henry anniversary event, featuring Governor Youngkin and the programming Mike helped orchestrate at St. John's Church.</p>
-                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <i class="fas fa-arrow-right text-xs"></i></span>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <svg style="display:inline-block;vertical-align:middle;" width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>
 
                 <!-- Press Item 3 -->
@@ -593,7 +615,7 @@
                     </div>
                     <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">GRTC Addresses Increased Bus Delays as Winter Approaches</p>
                     <p class="text-sm text-slate-500 leading-relaxed flex-1">Mike leads proactive media outreach for GRTC, getting ahead of service disruption concerns with transparent, rider-focused messaging during peak delay season.</p>
-                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <i class="fas fa-arrow-right text-xs"></i></span>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <svg style="display:inline-block;vertical-align:middle;" width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>
 
                 <!-- Press Item 4 -->
@@ -603,7 +625,7 @@
                     </div>
                     <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">16 Oak Trees Torn Down to Make Way for Westwood Tract Development</p>
                     <p class="text-sm text-slate-500 leading-relaxed flex-1">Community and media scrutiny of the Canopy at Ginter Park project — Mike provides institutional response on behalf of Union Presbyterian Seminary.</p>
-                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <i class="fas fa-arrow-right text-xs"></i></span>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <svg style="display:inline-block;vertical-align:middle;" width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>
 
             </div>
@@ -623,7 +645,7 @@
                     </div>
                     <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">Virginia 250th Anniversary — Scripted Video</p>
                     <p class="text-sm text-slate-500 leading-relaxed flex-1">Mike scripted this video for Virginia's 250th anniversary commemoration initiative, translating complex historical themes into compelling public-facing content.</p>
-                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Watch video <i class="fas fa-arrow-right text-xs"></i></span>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Watch video <svg style="display:inline-block;vertical-align:middle;" width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>
 
                 <!-- Owned Item 3 -->
@@ -633,7 +655,7 @@
                     </div>
                     <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">Yorktown Tea Party Prepares to Toast 250 Years of Defiance</p>
                     <p class="text-sm text-slate-500 leading-relaxed flex-1">News release written by Mike for Virginia's 250th anniversary commission, building anticipation for a marquee commemorative event in Yorktown.</p>
-                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read release <i class="fas fa-arrow-right text-xs"></i></span>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read release <svg style="display:inline-block;vertical-align:middle;" width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>
 
                 <!-- Owned Item 6 -->
@@ -643,7 +665,7 @@
                     </div>
                     <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">GRTC to Continue Free Bus Rides Through June 2024</p>
                     <p class="text-sm text-slate-500 leading-relaxed flex-1">News release written by Mike announcing GRTC's extension of fare-free service — a high-impact rider benefit requiring clear, timely public communication.</p>
-                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read release <i class="fas fa-arrow-right text-xs"></i></span>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read release <svg style="display:inline-block;vertical-align:middle;" width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>
 
                 <!-- Owned Item 7 -->
@@ -653,7 +675,7 @@
                     </div>
                     <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">The ONE Campaign — $51 Million Capital Campaign</p>
                     <p class="text-sm text-slate-500 leading-relaxed flex-1">Mike led the campaign communications strategy that helped Union Presbyterian Seminary successfully complete its $51 million capital campaign.</p>
-                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">View campaign <i class="fas fa-arrow-right text-xs"></i></span>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">View campaign <svg style="display:inline-block;vertical-align:middle;" width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>
 
             </div>
@@ -697,17 +719,20 @@
                 <button type="submit"
                     style="background:var(--blue-accent);"
                     class="text-white px-9 py-3.5 rounded-full font-semibold transition-all duration-200 shadow-lg flex items-center justify-center gap-2 text-sm hover:opacity-90 mt-2">
-                    <i class="fas fa-paper-plane text-sm"></i> Send Message
+                    <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message
                 </button>
                 <div id="form-success" class="hidden text-center py-3 px-4 rounded-xl text-sm font-semibold" style="background:rgba(201,169,110,0.15); color:var(--gold);">
                     Thanks! Your message has been sent. Mike will be in touch soon.
+                </div>
+                <div id="form-error" class="hidden text-center py-3 px-4 rounded-xl text-sm font-semibold" style="background:rgba(220,38,38,0.12); color:#fca5a5; border:1px solid rgba(220,38,38,0.25);">
+                    There was a problem sending your message. Please try again or email directly.
                 </div>
             </form>
 
             <div class="flex justify-center mt-10">
                 <a href="https://www.linkedin.com/in/mfrontiero/" target="_blank"
                    class="text-3xl text-slate-500 hover:text-white transition-colors duration-200">
-                    <i class="fab fa-linkedin"></i>
+                    <svg style="display:inline-block;vertical-align:middle;" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
             </div>
         </div>
@@ -766,10 +791,12 @@ window.addEventListener('scroll', () => {
 // ── Formspree AJAX submission ──
 const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
+const formError = document.getElementById('form-error');
 
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        formError.classList.add('hidden');
         const data = new FormData(contactForm);
         try {
             const response = await fetch(contactForm.action, {
@@ -782,13 +809,38 @@ if (contactForm) {
                 contactForm.style.display = 'none';
                 formSuccess.classList.remove('hidden');
             } else {
-                alert('There was a problem sending your message. Please try again.');
+                formError.classList.remove('hidden');
+                formError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
         } catch (err) {
-            alert('There was a problem sending your message. Please try again.');
+            formError.classList.remove('hidden');
+            formError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
     });
 }
+
+// ── Active Nav on Scroll ──
+const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+const sections = Array.from(navLinks).map(link => {
+    const id = link.getAttribute('href').slice(1);
+    return document.getElementById(id);
+}).filter(Boolean);
+
+function updateActiveNav() {
+    const scrollY = window.scrollY + 100;
+    let current = null;
+    sections.forEach(section => {
+        if (section.offsetTop <= scrollY) {
+            current = section.id;
+        }
+    });
+    navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
     </script>
 </body>
 </html>
