@@ -11,9 +11,6 @@
     
     <meta property="og:image" content="https://your-domain.com/og-preview.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -125,69 +122,6 @@
             border-left: 3px solid var(--gold);
         }
 
-        /* ─── CONTACT FORM ─── */
-        .form-input, .form-textarea {
-            width: 100%;
-            padding: 16px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            color: white;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            font-family: 'DM Sans', sans-serif;
-        }
-        
-        .form-input:focus, .form-textarea:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
-        }
-        
-        .form-input::placeholder, .form-textarea::placeholder {
-            color: rgba(255, 255, 255, 0.4);
-        }
-        
-        .form-textarea {
-            resize: vertical;
-            min-height: 140px;
-        }
-        
-        .submit-btn {
-            background: var(--gold);
-            color: var(--navy);
-            padding: 16px 48px;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .submit-btn:hover {
-            background: #d4b57d;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px -5px rgba(201, 169, 110, 0.4);
-        }
-        
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-        
-        .form-success {
-            display: none;
-            padding: 16px 24px;
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            border-radius: 12px;
-            color: #86efac;
-            margin-top: 20px;
-        }
-
         /* ─── MOBILE MENU ─── */
         #mobile-menu {
             display: none;
@@ -258,6 +192,7 @@
                 <a href="#impact"     class="hover:text-white transition-colors duration-200">Impact</a>
                 <a href="#experience" class="hover:text-white transition-colors duration-200">Experience</a>
                 <a href="#expertise"  class="hover:text-white transition-colors duration-200">Expertise</a>
+                <a href="#press"      class="hover:text-white transition-colors duration-200">Press</a>
                 <a href="#contact"    class="hover:text-white transition-colors duration-200">Contact</a>
             </div>
 
@@ -279,6 +214,7 @@
             <a href="#impact"     class="hover:text-white transition block py-1">Impact</a>
             <a href="#experience" class="hover:text-white transition block py-1">Experience</a>
             <a href="#expertise"  class="hover:text-white transition block py-1">Expertise</a>
+            <a href="#press"      class="hover:text-white transition block py-1">Press</a>
             <a href="#contact"    class="hover:text-white transition block py-1">Contact</a>
             <a href="https://www.linkedin.com/in/mfrontiero/" target="_blank"
                class="flex items-center gap-2 text-[#4da6d9] hover:text-white transition py-1">
@@ -622,41 +558,202 @@
         </div>
     </section>
 
+    <!-- ═══════════════════════════════════ PRESS ═══════════════════════════════════ -->
+    <section id="press" class="py-24 px-6" style="background:#f0f2f5; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0;">
+        <div class="max-w-5xl mx-auto">
+            <p class="text-xs uppercase tracking-widest mb-3 font-semibold text-center" style="color:var(--blue-accent);">Media</p>
+            <h2 class="font-display text-4xl section-heading centered mx-auto text-center mb-14" style="font-weight:400; color:#1e293b;">Earned media highlights</h2>
+            <div class="grid gap-5 md:grid-cols-2">
+
+                <!-- Press Item 1 -->
+                <a href="https://apnews.com/article/liberty-or-death-patrick-henry-speech-anniversary-3a94ef7dbfd76756d0a06d87e8e6bd33" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">AP News</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">"Give Me Liberty or Give Me Death" — 250th Anniversary of Patrick Henry's Speech</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">AP coverage of the 250th anniversary commemoration at St. John's Church, where Mike served as communications lead for the historic event.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Press Item 2 -->
+                <a href="https://richmond.com/news/state-regional/government-politics/youngkin-recalls-henrys-spark-of-revolutionary-history---and-recent-history/article_24a7b5ce-d03a-11ee-a445-0b4762ea2b1d.html" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">Richmond Times-Dispatch</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">Youngkin Recalls Henry's Spark of Revolutionary History — and Recent History</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">RTD coverage of the Patrick Henry anniversary event, featuring Governor Youngkin and the programming Mike helped orchestrate at St. John's Church.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Press Item 3 -->
+                <a href="https://www.wric.com/community/grtc-addresses-increased-bus-delays-as-winter-approaches/" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">ABC 8 / WRIC</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">GRTC Addresses Increased Bus Delays as Winter Approaches</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">Mike leads proactive media outreach for GRTC, getting ahead of service disruption concerns with transparent, rider-focused messaging during peak delay season.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Press Item 4 -->
+                <a href="https://www.wtvr.com/2017/08/11/16-oak-trees-torn-down-to-make-way-for-westwood-tract-development" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">CBS 6 / WTVR</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">16 Oak Trees Torn Down to Make Way for Westwood Tract Development</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">Community and media scrutiny of the Canopy at Ginter Park project — Mike provides institutional response on behalf of Union Presbyterian Seminary.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read coverage <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ OWNED MEDIA ═══════════════════════════════════ -->
+    <section id="owned-media" class="py-24 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-display text-4xl section-heading centered mx-auto text-center mb-14" style="font-weight:400; color:#1e293b;">Owned media highlights</h2>
+            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Owned Item 1 -->
+                <a href="https://www.youtube.com/watch?v=LRZdYYppHnA" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">VA250 · Video</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">Virginia 250th Anniversary — Scripted Video</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">Mike scripted this video for Virginia's 250th anniversary commemoration initiative, translating complex historical themes into compelling public-facing content.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Watch video <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Owned Item 2 -->
+                <a href="https://prsarichmond.starchapter.com/blog/6" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">PRSA Richmond · Feature</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">Public Relations Society of America — Member Feature</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">A profile of Mike published by the PRSA Richmond chapter, highlighting his career, philosophy, and contributions to the public relations profession.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read feature <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Owned Item 3 -->
+                <a href="https://va250.org/2023/12/04/yorktown-tea-party-prepares-to-toast-250-years-of-defiance/" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">VA250 · News Release</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">Yorktown Tea Party Prepares to Toast 250 Years of Defiance</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">News release written by Mike for Virginia's 250th anniversary commission, building anticipation for a marquee commemorative event in Yorktown.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read release <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Owned Item 4 -->
+                <a href="https://us17.campaign-archive.com/?u=f81ac561961ca79fe9b43fa02&id=8dcfaf36a5" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">GRTC · Newsletter</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">GRTC Rider Newsletter</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">A rider-facing newsletter written by Mike for GRTC, keeping transit customers informed with clear, accessible updates on service changes and agency news.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read newsletter <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Owned Item 5 -->
+                <a href="https://youtu.be/xxBn5ux5d-0?si=GZ5gzr8Wn0A7NeCt" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">Workforce Campaign · Video</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">Workforce Recruitment Campaign Video</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">Video produced as part of a workforce recruitment campaign Mike led, designed to attract top talent through authentic, mission-driven storytelling.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Watch video <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Owned Item 6 -->
+                <a href="https://mailchi.mp/ridegrtc/news-release-grtc-to-continue-free-bus-rides-through-june-2024" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">GRTC · News Release</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">GRTC to Continue Free Bus Rides Through June 2024</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">News release written by Mike announcing GRTC's extension of fare-free service — a high-impact rider benefit requiring clear, timely public communication.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read release <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Owned Item 7 -->
+                <a href="https://www.upsem.edu/give/onecampaign/" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">UPSem · Campaign</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">The ONE Campaign — $51 Million Capital Campaign</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">Mike led the campaign communications strategy that helped Union Presbyterian Seminary successfully complete its $51 million capital campaign.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">View campaign <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Owned Item 8 -->
+                <a href="https://www.upsem.edu/newsroom/new-grant-to-study-how-theological-education-can-be-more-intercultural/" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">UPSem · News Release</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">New Grant to Study How Theological Education Can Be More Intercultural</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">News release written by Mike announcing a significant grant award, positioning UPSem as a national leader in intercultural theological education.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read release <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+                <!-- Owned Item 9 -->
+                <a href="https://news.vcu.edu/article/vcu_awarded_44_million_grant_to_boost_employment_for_people_with" target="_blank" rel="noopener" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-3 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded-full" style="background:rgba(30,115,190,0.08); color:var(--blue-accent);">VCU · News Release</span>
+                    </div>
+                    <p class="font-display text-lg text-slate-800 font-normal leading-snug group-hover:text-blue-700 transition-colors duration-200">VCU Awarded $4.4 Million Grant to Boost Employment for People with Disabilities</p>
+                    <p class="text-sm text-slate-500 leading-relaxed flex-1">News release written by Mike announcing a landmark federal grant, highlighting VCU's commitment to workforce inclusion and disability employment research.</p>
+                    <span class="text-xs font-semibold flex items-center gap-1 mt-1" style="color:var(--blue-accent);">Read release <i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
     <!-- ═══════════════════════════════════ CONTACT (NEW SECTION) ═══════════════════════════════════ -->
     <section id="contact" class="footer-bg text-white py-28 px-6">
-        <div class="max-w-3xl mx-auto relative z-10">
+        <div class="max-w-2xl mx-auto relative z-10">
             <p class="text-xs uppercase tracking-widest mb-4 font-semibold text-center" style="color:var(--gold);">Get In Touch</p>
-           
             <h2 class="font-display text-5xl md:text-6xl mb-6 font-light tracking-tight text-center">Ready to talk strategy?</h2>
-            <p class="text-slate-400 mb-10 text-lg font-light max-w-xl mx-auto text-center">
-                Whether you're facing a crisis, building a campaign, or shaping a narrative — let's connect.
+            <p class="text-slate-400 mb-10 text-lg font-light text-center max-w-xl mx-auto">
+                Whether you're facing a crisis, building a campaign, or shaping a narrative — let's find time to connect.
             </p>
 
             <!-- Contact Form -->
-            <form id="contactForm" action="https://formspree.io/f/xkovyloo" method="POST" class="space-y-5 mb-10">
+            <form action="https://formspree.io/f/xkovyloo" method="POST" class="flex flex-col gap-5" id="contact-form">
                 <div class="grid md:grid-cols-2 gap-5">
-                    <div>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required class="form-input">
+                    <div class="flex flex-col gap-2">
+                        <label for="name" class="text-xs uppercase tracking-widest font-semibold text-slate-400">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name"
+                            class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-white/50 transition-colors duration-200 text-sm">
                     </div>
-                    <div>
-                        <input type="email" name="_replyto" id="email" placeholder="Your Email" required class="form-input">
+                    <div class="flex flex-col gap-2">
+                        <label for="email" class="text-xs uppercase tracking-widest font-semibold text-slate-400">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com"
+                            class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-white/50 transition-colors duration-200 text-sm">
                     </div>
                 </div>
-                <div>
-                    <input type="text" name="_subject" id="subject" placeholder="Subject" required class="form-input">
+                <div class="flex flex-col gap-2">
+                    <label for="subject" class="text-xs uppercase tracking-widest font-semibold text-slate-400">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What can I help you with?"
+                        class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-white/50 transition-colors duration-200 text-sm">
                 </div>
-                <div>
-                    <textarea name="message" id="message" placeholder="Your Message" required class="form-textarea"></textarea>
+                <div class="flex flex-col gap-2">
+                    <label for="message" class="text-xs uppercase tracking-widest font-semibold text-slate-400">Message</label>
+                    <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project or challenge..."
+                        class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-white/50 transition-colors duration-200 text-sm resize-none"></textarea>
                 </div>
-                <!-- Redirect to custom success page -->
-                <input type="hidden" name="_next" value="https://mikefrontiero.com/success.html">
-                <div class="text-center">
-                    <button type="submit" class="submit-btn">Send Message</button>
+                <input type="hidden" name="_replyto" value="mike@mikefrontiero.com">
+                <button type="submit"
+                    style="background:var(--blue-accent);"
+                    class="text-white px-9 py-3.5 rounded-full font-semibold transition-all duration-200 shadow-lg flex items-center justify-center gap-2 text-sm hover:opacity-90 mt-2">
+                    <i class="fas fa-paper-plane text-sm"></i> Send Message
+                </button>
+                <div id="form-success" class="hidden text-center py-3 px-4 rounded-xl text-sm font-semibold" style="background:rgba(201,169,110,0.15); color:var(--gold);">
+                    Thanks! Your message has been sent. Mike will be in touch soon.
                 </div>
             </form>
 
-            <!-- Alternative Contact Methods -->
-            <div class="flex flex-col items-center gap-5 pt-8 border-t border-slate-700">
+            <div class="flex justify-center mt-10">
                 <a href="https://www.linkedin.com/in/mfrontiero/" target="_blank"
                    class="text-3xl text-slate-500 hover:text-white transition-colors duration-200">
                     <i class="fab fa-linkedin"></i>
@@ -667,7 +764,7 @@
         <p class="text-slate-600 text-xs mt-20 text-center">© 2026 Mike Frontiero. All rights reserved.</p>
     </section>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // ── Mobile menu toggle ──
         const toggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -700,3 +797,47 @@
         document.querySelectorAll('.fade-up').forEach(el => {
             observer.observe(el);
         });
+// ── Header Scroll Effect ──
+const nav = document.querySelector('.sticky-nav');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        // Scrolled state: Solid background with shadow
+        nav.style.backgroundColor = "rgba(15, 23, 42, 0.97)";
+        nav.style.boxShadow = "0 1px 0 rgba(255,255,255,0.05)";
+    } else {
+        // Top state: Transparent
+        nav.style.backgroundColor = "transparent";
+        nav.style.boxShadow = "none";
+    }
+});
+
+// ── Formspree AJAX submission ──
+const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const data = new FormData(contactForm);
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                contactForm.reset();
+                contactForm.style.display = 'none';
+                formSuccess.classList.remove('hidden');
+            } else {
+                alert('There was a problem sending your message. Please try again.');
+            }
+        } catch (err) {
+            alert('There was a problem sending your message. Please try again.');
+        }
+    });
+}
+    </script>
+</body>
+</html>
